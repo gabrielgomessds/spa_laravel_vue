@@ -1,6 +1,7 @@
 <script setup>
 import Pagination from '@/Components/Pagination.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import Sortable from '@/Components/Sortable.vue';
 import { Head, Link, router } from '@inertiajs/vue3';
 
 const deleteRow = (id) => {
@@ -65,16 +66,16 @@ const handleSearch = (event) => {
                                         Nº
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Nome
+                                        <Sortable label="Product name" name="name" />
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         Categoria
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Preço
+                                        <Sortable label="Price" name="price" />
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        Peso
+                                        <Sortable label="Weight" name="weight" />
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         Ações
