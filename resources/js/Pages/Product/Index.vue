@@ -4,6 +4,7 @@ import Pagination from '@/Components/Pagination.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import Sortable from '@/Components/Sortable.vue';
 import Checkbox from '@/Components/Checkbox.vue';
+import CheckAll from '@/Components/CheckAll.vue';
 import { Head, Link, router } from '@inertiajs/vue3';
 
 const deleteRow = (id) => {
@@ -68,7 +69,7 @@ const handleSearch = (event) => {
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b">
                                 <tr>
                                     <th scope="col" class="px-6 py-3" with="5">
-                                        <Checkbox />
+                                        <CheckAll :rows="products.data" v-model="selectedIds"/>
                                     </th>
                                      <th scope="col" class="px-6 py-3" with="5">
                                         N°
