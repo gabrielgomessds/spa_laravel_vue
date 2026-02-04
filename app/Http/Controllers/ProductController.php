@@ -110,4 +110,17 @@ class ProductController extends Controller
             ->route('products.index')
             ->with('message', 'Produto deletado com sucesso!');
     }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function bulkDestroy(string $ids)
+    {
+        $ids = explode(',', $ids);
+        Product::destroy($ids);
+
+        return redirect()
+            ->route('products.index')
+            ->with('message', 'Produtos selecionados deletados com sucesso');
+    }
 }
