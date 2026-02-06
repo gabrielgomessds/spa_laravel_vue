@@ -125,8 +125,8 @@ export default {
 }
 
 .toast-icon {
-  width: 16px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   padding: 7px;
 }
