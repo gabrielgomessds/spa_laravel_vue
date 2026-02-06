@@ -5,7 +5,7 @@
         <component :is="toastIcon"></component>
       </div>
       <div class="toast-content">
-        <div class="toast-title">{{ toastTitle }}</div>
+        <div class="toast-title">{{ title }}</div>
         <div class="toast-message">{{ message }}</div>
       </div>
       <button class="toast-button" @click="$emit('hide')">&times;</button>
@@ -125,8 +125,8 @@ export default {
 }
 
 .toast-icon {
-  width: 16px;
-  height: 16px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   padding: 7px;
 }

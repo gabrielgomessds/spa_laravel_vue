@@ -12,7 +12,7 @@ const selectedIds = ref([])
 const showModal = ref(false)
 
 const deleteRow = (id) => {
-    if (window.confirm("Are you sure?")) {
+    if (window.confirm("Tem certeza que deseja deletar esse produto?")) {
         router.delete(route('products.destroy', id), {
             preserveScroll: true
         })
@@ -20,7 +20,7 @@ const deleteRow = (id) => {
 }
 
 const deleteSelected = () => {
-    if (window.confirm("Are you sure to delete selected products?")) {
+    if (window.confirm("Deletar produtos selecionados?")) {
         router.delete(route('products.bulk-destroy', selectedIds.value.join(',')), {
             preserveScroll: true,
             onSuccess: () => selectedIds.value = []

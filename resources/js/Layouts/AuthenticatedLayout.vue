@@ -12,6 +12,7 @@ const showingNavigationDropdown = ref(false);
 const showingToast = ref(false);
 
 router.on('finish', () => {
+    showingToast.value = !!usePage().props.toast.title
     showingToast.value = !!usePage().props.toast.message
 });
 </script>
@@ -204,6 +205,7 @@ router.on('finish', () => {
             >
                 <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                     <slot name="header" />
+                    {{ $page.props.toast.title || null }}
                 </div>
             </header>
 
@@ -213,6 +215,7 @@ router.on('finish', () => {
             </main>
         </div>
         <Toast :message="$page.props.toast.message || ''" 
+                :title="$page.props.toast.title || null" 
                 :show="showingToast" 
                 @hide="showingToast = false"
                 type="success" 
