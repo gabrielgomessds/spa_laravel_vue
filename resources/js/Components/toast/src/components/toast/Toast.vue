@@ -5,7 +5,7 @@
         <component :is="toastIcon"></component>
       </div>
       <div class="toast-content">
-        <div class="toast-title">{{ toastTitle }}</div>
+        <div class="toast-title">{{ title }}</div>
         <div class="toast-message">{{ message }}</div>
       </div>
       <button class="toast-button" @click="$emit('hide')">&times;</button>

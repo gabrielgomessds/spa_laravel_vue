@@ -65,6 +65,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('products.index')
+            ->with('title', 'Sucesso')
             ->with('message', 'Produto cadastrado com sucesso');
     }
 
@@ -98,6 +99,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('products.index')
+            ->with('title', 'Sucesso')
             ->with('message', 'Produto atualizado com sucesso');
     }
 
@@ -113,6 +115,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('products.index')
+            ->with('title', 'Sucesso')
             ->with('message', 'Produtos selecionados atualizados com sucesso');
     }
 
@@ -125,6 +128,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('products.index')
+            ->with('title', 'Sucesso')
             ->with('message', 'Produto deletado com sucesso!');
     }
 
@@ -138,6 +142,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('products.index')
+            ->with('title', 'Sucesso')
             ->with('message', 'Produtos selecionados deletados com sucesso');
     }
 }
